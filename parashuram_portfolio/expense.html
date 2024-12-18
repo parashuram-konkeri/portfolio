@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<title> Expense tracker</title>
+
+<head>
+    <style>
+        body {
+            background-color: rgb(168, 211, 211);
+        }
+
+        #track {
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 15px;
+            margin: auto;
+            margin-top: 100px;
+            left: 50px;
+            height: auto;
+            background-color: white;
+            box-shadow: 20px 20px 10px rgba(238, 128, 214, 0.705);
+            box-shadow: -20px -20px 10px rgba(226, 125, 125, 0.342);
+
+
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 3px;
+
+        }
+
+        button {
+            padding: 5px;
+            margin-top: 8px;
+            background-color: blue;
+            color: white
+        }
+
+        table,
+        th,
+        td,
+        tr {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="track">
+
+        <b>
+            <h3> Expense Tracker</h3>
+        </b>
+
+        <b>Item Name:</b> <br>
+        <input type="text" pattern="^[a-zA-Z]+$" name="name1" id="itemName" placeholder="Enter item name"><br>
+        <b> Item Amount: </b> <br>
+        <input type="number" name="amount1" id="itemAmount" placeholder="Enter item amount"><br>
+
+        <button type="button" id="addItem"> Add item</button>
+        <button type="button" id="clearAll"> Clear All</button>
+
+
+        <h4> Item List </h4>
+        <table id="itemTable">
+            <thead>
+                <th> Item Name</th>
+                <th> Item Amount</th>
+
+            </thead>
+            <tbody>
+
+            </tbody>
+
+
+        </table>
+
+        <button type="button" id="calculateTotal">calculateTotal</button>
+        <h3 id="totalAmount">Total Amount: 0</h3>
+    </div>
+    <script src="expenses.js"></script>
+</body>
+
+</html>
